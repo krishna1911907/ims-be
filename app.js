@@ -12,24 +12,21 @@ server.post("/users", async (req, res) => {
        const db= await connection.db(DB)
        const result=await db.collection("users")
        if(result.length>0){
-        res.json((error:"User Already Have An Account"))
+        res.json("error: User Already Have An Account")
        }
      
-       const then((collection)=>collection.insertOne({
-        name:req.body.name,
-        email:req.body.email,
-            password:req.body.password,
-            phone:req.body.phone
-       })).then((result)=>console.log(result)).
-       catch((error)=>console.log(error))
+      
   }
   else{
    await collection.insertOne({
-    name=res.body.name,
-    email=res.body.email,
-    password=res.body.password,
-    phone=res.body.phone
-   }
+    name:res.body.name,
+    email:res.body.email,
+   password:res.body.pasword,
+   phone:res.body.phone
+  
+   },res.json("User Created")
+  
+   
 
    )
   }
