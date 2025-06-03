@@ -1,0 +1,17 @@
+{
+  "name": "ims-be",
+  "version": "1.0.0",
+  "description": "Ims Managment",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "author": "Krishna",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongodb": "^6.16.0",
+    "nodemon": "^3.1.10"
+  }
+}
